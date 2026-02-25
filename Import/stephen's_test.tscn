@@ -1,0 +1,93 @@
+[gd_scene format=3 uid="uid://dre3cxd0npdm0"]
+
+[ext_resource type="Script" uid="uid://cd62j4g06ieb1" path="res://src/jon/test_scene.gd" id="1_4bm2j"]
+[ext_resource type="PackedScene" uid="uid://ddrh3hrjjpigg" path="res://src/stephen/test_player.tscn" id="2_4bm2j"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_d5g44"]
+size = Vector3(5, 1, 5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nu75q"]
+albedo_color = Color(0.67072505, 0.25768244, 0.03459908, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ehpiy"]
+material = SubResource("StandardMaterial3D_nu75q")
+size = Vector3(10, 1, 10)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4bm2j"]
+albedo_color = Color(0.2627451, 0.40784314, 0.2627451, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_d5g44"]
+material = SubResource("StandardMaterial3D_4bm2j")
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4bm2j"]
+size = Vector3(5, 1, 5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ehpiy"]
+albedo_color = Color(1, 0.050980393, 0.050980393, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_3lqs8"]
+material = SubResource("StandardMaterial3D_ehpiy")
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_4bm2j"]
+
+[node name="Stephen\'sTest" type="Node3D" unique_id=434926233]
+script = ExtResource("1_4bm2j")
+
+[node name="Ground" type="StaticBody3D" parent="." unique_id=72245099]
+transform = Transform3D(11.898016, 0, 0, 0, 1, 0, 0, 0, 11.898016, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground" unique_id=734106126]
+shape = SubResource("BoxShape3D_d5g44")
+
+[node name="Ground" type="MeshInstance3D" parent="Ground" unique_id=1628508306]
+mesh = SubResource("BoxMesh_ehpiy")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1868490536]
+transform = Transform3D(1, 0, 0, 0, 0.090771645, 0.9958718, 0, -0.9958718, 0.090771645, 0, 16.168884, 0)
+shadow_enabled = true
+
+[node name="TestPlayer" parent="." unique_id=833042479 instance=ExtResource("2_4bm2j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0687473, 0)
+acceleration = 5.0
+jump_additional_force = 6.0
+
+[node name="Box" type="StaticBody3D" parent="." unique_id=1460226011]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.0030375, 0, 0)
+
+[node name="Ground" type="MeshInstance3D" parent="Box" unique_id=1291895596]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.9387245, 0.9584496, 3.648726)
+mesh = SubResource("BoxMesh_d5g44")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Box" unique_id=2137510002]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.9387245, 0.9584496, 3.648726)
+shape = SubResource("BoxShape3D_4bm2j")
+
+[node name="Box2" type="StaticBody3D" parent="." unique_id=1261232298]
+transform = Transform3D(0.67240554, 0, -0.74018294, 0, 1, 0, 0.74018294, 0, 0.67240554, -4.6037707, 2.1031218, 4.9144373)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Box2" unique_id=321598772]
+shape = SubResource("BoxShape3D_d5g44")
+
+[node name="Ground" type="MeshInstance3D" parent="Box2" unique_id=1341992460]
+mesh = SubResource("BoxMesh_d5g44")
+
+[node name="Box2" type="StaticBody3D" parent="Box2" unique_id=647247532]
+transform = Transform3D(0.67240554, 0, -0.7401829, 0, 1, 0, 0.7401829, 0, 0.67240554, -7.2247543, 2.1031218, -2.3636522)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Box2/Box2" unique_id=1571290076]
+shape = SubResource("BoxShape3D_d5g44")
+
+[node name="Ground" type="MeshInstance3D" parent="Box2/Box2" unique_id=1378252960]
+mesh = SubResource("BoxMesh_d5g44")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=1701666504]
+mass = 0.1
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D" unique_id=123516341]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.616699, 1.6172838, 0)
+mesh = SubResource("SphereMesh_3lqs8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" unique_id=242460382]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.616699, 1.6172838, 0)
+shape = SubResource("SphereShape3D_4bm2j")

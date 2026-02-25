@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b20e6cns074dh"]
+
+[ext_resource type="Texture2D" uid="uid://bqe2ywf0unb1k" path="res://Kenney/kenney_platformer-kit/Models/FBX format/Textures/colormap.png" id="1_hq2i0"]
+
+[resource]
+resource_name = "colormap"
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_hq2i0")
+emission_enabled = true

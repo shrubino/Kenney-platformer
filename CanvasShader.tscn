@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cy3wqhlw5l1ts"]
+
+[ext_resource type="Shader" uid="uid://bd1g7sfs80koc" path="res://Shader/OKLCH.gdshader" id="1_a61n2"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_okiy8"]
+shader = ExtResource("1_a61n2")
+shader_parameter/mix_amount = 0.0
+shader_parameter/use_l = true
+shader_parameter/use_c = true
+shader_parameter/use_h = true
+shader_parameter/steps_l = 25.0
+shader_parameter/level_c = 5.0
+shader_parameter/level_h = 0.05
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1633065117]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1298842138]
+material = SubResource("ShaderMaterial_okiy8")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 2.0
+offset_bottom = 4.0
+mouse_filter = 2

@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dbmcfjqeujdbv"]
+
+[ext_resource type="Material" uid="uid://ceac0kie08d8u" path="res://GRASSMat.tres" id="1_nxa8t"]
+
+[sub_resource type="PrismMesh" id="PrismMesh_tl6me"]
+
+[node name="Node3D" type="Node3D" unique_id=1774457060]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1372349598]
+material_override = ExtResource("1_nxa8t")
+mesh = SubResource("PrismMesh_tl6me")

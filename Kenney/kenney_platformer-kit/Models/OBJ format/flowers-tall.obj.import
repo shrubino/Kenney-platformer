@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cxnmq8edoi2hq"
+path="res://.godot/imported/flowers-tall.obj-9ea375659f227dcd75e3c3662d01569e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/flowers-tall.obj-9ea375659f227dcd75e3c3662d01569e.mesh"]
+
+source_file="res://Kenney/kenney_platformer-kit/Models/OBJ format/flowers-tall.obj"
+dest_files=["res://.godot/imported/flowers-tall.obj-9ea375659f227dcd75e3c3662d01569e.mesh", "res://.godot/imported/flowers-tall.obj-9ea375659f227dcd75e3c3662d01569e.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cw4xln7wj3ns1"
+path="res://.godot/imported/star.obj-55fb23cec4dbdf9c9f84403fe213f5de.mesh"
+
+[deps]
+
+files=["res://.godot/imported/star.obj-55fb23cec4dbdf9c9f84403fe213f5de.mesh"]
+
+source_file="res://Kenney/kenney_platformer-kit/Models/OBJ format/star.obj"
+dest_files=["res://.godot/imported/star.obj-55fb23cec4dbdf9c9f84403fe213f5de.mesh", "res://.godot/imported/star.obj-55fb23cec4dbdf9c9f84403fe213f5de.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

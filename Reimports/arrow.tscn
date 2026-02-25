@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://b1olr3x83lsiv"]
+
+[ext_resource type="PackedScene" uid="uid://2wlvo6at0wd1" path="res://Kenney/kenney_platformer-kit/Models/GLB format/arrow.glb" id="1_nhjsv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nsvia"]
+size = Vector3(0.45569998, 0.6, 0.14227206)
+
+[node name="arrow2" unique_id=594721448 instance=ExtResource("1_nhjsv")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="arrow" parent_id_path=PackedInt32Array(31261064) index="0" unique_id=1214443579]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.025000006, 0.3, 0.015136033)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="arrow/StaticBody3D" index="0" unique_id=957145966]
+shape = SubResource("BoxShape3D_nsvia")
